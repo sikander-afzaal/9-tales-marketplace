@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="hero">
         {openChestModal && <OpenChestModal closeModal={setOpenChestModal} />}
         {buyModal && <BuyModal closeModal={setBuyModal} />}
-        <img src="/hero-bg.png" className="hero-bg" alt="" />
+        <img src="/bg1.png" className="hero-bg" alt="" />
         <img
           onClick={() => setOpenChestModal(true)}
           src="/key.png"
