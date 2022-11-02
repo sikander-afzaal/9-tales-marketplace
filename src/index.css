@@ -12,7 +12,7 @@
   font-family: "Katibeh", cursive;
 }
 :root {
-  --max-width: 1700px;
+  --max-width: 100%;
   --red-gradient: linear-gradient(
     180deg,
     rgba(108, 12, 12, 0.8) 0%,

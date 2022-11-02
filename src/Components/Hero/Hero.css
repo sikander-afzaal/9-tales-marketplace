@@ -5,7 +5,8 @@
   width: 100%;
   max-width: var(--max-width);
   position: relative;
-  height: 730px;
+  min-height: 730px;
+  height: 100vh;
   margin-top: 80px;
 }
 .hero-bg {
@@ -14,10 +15,22 @@
 }
 .key {
   position: absolute;
-  left: 10%;
+  left: 9%;
   top: 60%;
   cursor: pointer;
   z-index: 40;
+  width: 280px;
+}
+@media screen and (max-width: 1700px) {
+  .key {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 1570px) {
+  .key {
+    width: 230px;
+    top: 61%;
+  }
 }
 @media screen and (max-width: 1515px) {
   .key {
@@ -32,7 +45,7 @@
 }
 .chest {
   position: absolute;
-  top: 40%;
+  top: 47%;
   cursor: pointer;
   left: 50%;
   transform: translate(-50%, -50%);
