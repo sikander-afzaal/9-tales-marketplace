@@ -44,7 +44,7 @@
   top: 40%;
   width: 200px;
   height: 370px;
-  background-color: black;
+  background-color: transparent;
   cursor: pointer;
   transform: rotate(14deg);
   z-index: 30;
