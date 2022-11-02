@@ -53,10 +53,10 @@
 .scroll-bottom {
   background-color: black;
   position: absolute;
-  right: 9%;
+  right: 8%;
   top: 40%;
-  width: 200px;
-  height: 370px;
+  width: 280px;
+  height: 530px;
   background-color: transparent;
   cursor: pointer;
   transform: rotate(14deg);
