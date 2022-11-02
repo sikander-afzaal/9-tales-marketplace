@@ -3,6 +3,4 @@
   background-repeat: no-repeat;
   background-size: cover;
   gap: 40px;
-  max-width: var(--max-width);
-  margin: 0 auto;
 }
