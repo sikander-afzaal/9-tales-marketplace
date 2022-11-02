@@ -32,12 +32,13 @@
 .prize-div {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 80px;
   height: 100%;
   width: 100%;
   max-width: var(--max-width);
+  padding-inline: 20px;
 }
 .prize-div h2 {
   color: #e4e4e4;
@@ -47,7 +48,7 @@
 }
 .prizes-pool {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 40px;
 }
