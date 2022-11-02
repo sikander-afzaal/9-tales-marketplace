@@ -14,10 +14,21 @@
 }
 .key {
   position: absolute;
-  left: 9%;
+  left: 10%;
   top: 60%;
   cursor: pointer;
   z-index: 40;
+}
+@media screen and (max-width: 1515px) {
+  .key {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .key {
+    width: 190px;
+    left: 10%;
+  }
 }
 .chest {
   position: absolute;
@@ -29,11 +40,11 @@
 .scroll-bottom {
   background-color: black;
   position: absolute;
-  right: 8%;
+  right: 9%;
   top: 40%;
   width: 200px;
   height: 370px;
-  background-color: transparent;
+  background-color: black;
   cursor: pointer;
   transform: rotate(14deg);
   z-index: 30;
