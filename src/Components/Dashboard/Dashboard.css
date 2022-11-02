@@ -1,0 +1,248 @@
+.dashboard {
+  display: grid;
+  grid-template-areas: "sidebar dash";
+  grid-template-columns: 270px 1fr;
+  column-gap: 30px;
+  width: 100%;
+  max-width: 1440px;
+  padding-inline: 20px;
+}
+.sidebar {
+  grid-area: sidebar;
+  background: var(--red-gradient);
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 550px;
+  padding-top: 40px;
+  padding-inline: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  gap: 20px;
+}
+.sidebar h2 {
+  font-weight: 700;
+  font-size: 32px;
+  color: #e4e4e4;
+}
+.purchase-box {
+  width: 100%;
+  background: rgba(35, 6, 6, 0.53);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  align-items: flex-end;
+  gap: 12px;
+}
+.purchase-box > div h4 {
+  color: #e4e4e4;
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+.purchase-box > div p {
+  color: #e36464;
+  font-weight: 400;
+  font-size: 11px;
+}
+.purchase-box > h3 {
+  font-weight: 400;
+  color: #e36464;
+  font-size: 15px;
+}
+.main-dash {
+  grid-area: dash;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: var(--red-gradient);
+  height: 56px;
+  border-radius: 20px;
+  padding-inline: 20px;
+}
+.left-bar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.input-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgba(35, 6, 6, 0.53);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 292px;
+  height: 32px;
+  padding-left: 10px;
+  gap: 10px;
+}
+.input-div svg {
+  color: rgba(227, 100, 100, 0.6);
+  font-size: 18px;
+}
+.input-div input {
+  background-color: transparent;
+  border: none;
+  color: rgba(227, 100, 100, 0.6);
+  font-size: 16px;
+}
+.input-div input::placeholder {
+  color: rgba(227, 100, 100, 0.6);
+  font-size: 16px;
+}
+.input-div input:focus {
+  outline: none;
+}
+.left-bar > select {
+  width: 120px;
+  height: 28px;
+  background-color: transparent;
+  color: rgba(227, 100, 100, 0.6);
+  font-weight: 400;
+  font-size: 16px;
+  border: 2px solid rgba(227, 100, 100, 0.6);
+  border-radius: 10px;
+  padding-inline: 5px;
+}
+.left-bar > select option {
+  background-color: rgba(35, 6, 6, 0.53);
+  color: white;
+}
+.check-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.check-box .check {
+  position: relative;
+  cursor: pointer;
+}
+.check img {
+  position: absolute;
+  top: 24%;
+  left: 15%;
+  user-select: none;
+  width: 20px;
+  object-fit: contain;
+  display: none;
+}
+.check-box input {
+  appearance: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(227, 100, 100, 0.6);
+  border-radius: 10px;
+  background-color: transparent;
+  accent-color: rgba(227, 100, 100, 0.6);
+}
+.check1 input:checked ~ .img1 {
+  display: block;
+}
+.check2 input:checked ~ .img2 {
+  display: block;
+}
+.check3 input:checked ~ .img3 {
+  display: block;
+}
+.check-box label {
+  user-select: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  color: rgba(227, 100, 100, 0.6);
+}
+.per-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.per-page > select {
+  width: 60px;
+  height: 28px;
+  background-color: transparent;
+  color: rgba(227, 100, 100, 0.6);
+  font-weight: 400;
+  font-size: 16px;
+  border: 2px solid rgba(227, 100, 100, 0.6);
+  border-radius: 10px;
+  padding-inline: 5px;
+}
+.per-page > select option {
+  background-color: rgba(35, 6, 6, 0.53);
+  color: white;
+}
+.per-page label {
+  color: rgba(227, 100, 100, 0.6);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+}
+.nft-cards {
+  height: 474px;
+  padding: 20px;
+  max-height: 474px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  grid-auto-rows: 1fr;
+  background: var(--red-gradient);
+  border-radius: 20px;
+  gap: 20px;
+}
+.nft-card {
+  width: 100%;
+  min-width: 200px;
+  height: 200px;
+  background: rgba(35, 6, 6, 0.53);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nft-card img {
+  height: 70%;
+  object-fit: contain;
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.nft-cards {
+  scrollbar-width: auto;
+  scrollbar-color: #a14040 rgba(35, 6, 6, 0.6);
+}
+
+/* Chrome, Edge, and Safari */
+.nft-cards::-webkit-scrollbar {
+  width: 22px;
+}
+
+.nft-cards::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(35, 6, 6, 0.6);
+}
+
+.nft-cards::-webkit-scrollbar-thumb {
+  background-color: #a14040;
+  border-radius: 10px;
+  border: none;
+}

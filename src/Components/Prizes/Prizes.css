@@ -1,0 +1,70 @@
+.prizes {
+  background: linear-gradient(
+    180deg,
+    rgba(5, 2, 7, 0.93) 0%,
+    rgba(5, 3, 21, 0.93) 100%
+  );
+
+  height: 140px;
+}
+.left-patt,
+.right-patt {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-patt img,
+.right-patt img {
+  max-width: 100%;
+  object-fit: contain;
+  height: 90%;
+}
+.left-patt {
+  left: 0;
+  top: 0;
+}
+.right-patt {
+  right: 0;
+  top: 0;
+}
+.prize-div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  height: 100%;
+  width: 100%;
+  max-width: var(--max-width);
+}
+.prize-div h2 {
+  color: #e4e4e4;
+  font-weight: 400;
+  font-size: 76px;
+  text-transform: capitalize;
+}
+.prizes-pool {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.prize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.prize p {
+  color: white;
+  font-weight: 400;
+  font-size: 24px;
+}
+.prize p span {
+  color: #ac4142;
+}
+.prize p .block {
+  display: block;
+}

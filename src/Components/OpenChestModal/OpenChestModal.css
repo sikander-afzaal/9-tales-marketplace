@@ -1,0 +1,64 @@
+.overlay {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  z-index: 80;
+  width: 100%;
+  height: calc(100% - 80px);
+  background: linear-gradient(
+    180deg,
+    rgba(5, 2, 7, 0.79) 0%,
+    rgba(5, 3, 21, 0.79) 100%
+  );
+  cursor: pointer;
+}
+.open-modal {
+  position: absolute;
+  z-index: 81;
+  width: 600px;
+  height: 546px;
+  left: 50%;
+  top: 49.5%;
+  transform: translate(-50%, -50%);
+}
+.modal-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.modal-chest {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.open-chest {
+  bottom: 5%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  cursor: pointer;
+}
+.open-chest h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(180deg, #ebc680 0%, #866429 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.open-chest .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+}
