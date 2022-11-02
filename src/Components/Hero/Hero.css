@@ -5,7 +5,8 @@
   width: 100%;
   max-width: var(--max-width);
   position: relative;
-  height: 1000px;
+  height: 810px;
+  margin-top: 80px;
 }
 .hero-bg {
   height: 100%;
@@ -14,13 +15,13 @@
 .key {
   position: absolute;
   left: 9%;
-  top: 53%;
+  top: 51%;
   cursor: pointer;
   z-index: 40;
 }
 .chest {
   position: absolute;
-  top: 38%;
+  top: 34%;
   cursor: pointer;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -33,7 +34,7 @@
   isolation: isolate;
   width: 513px;
   height: 180px;
-  top: 12%;
+  top: 5%;
   left: 50%;
   z-index: 81;
   transform: translateX(-50%);
