@@ -15,7 +15,7 @@ const Hero = () => {
           alt=""
           className="key"
         />
-        <img src="/Chest.png" alt="" className="chest" />
+        <img src="/chest.png" alt="" className="chest" />
         <div className="btn-div">
           <img src="/gold-frame.png" alt="" className="frame" />
           <div className="btn">
