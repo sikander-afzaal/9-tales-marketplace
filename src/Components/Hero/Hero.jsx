@@ -1,13 +1,16 @@
 import { useState } from "react";
+import BuyModal from "../BuyModal/BuyModal";
 import OpenChestModal from "../OpenChestModal/OpenChestModal";
 import "./Hero.css";
 
 const Hero = () => {
   const [openChestModal, setOpenChestModal] = useState(false);
+  const [buyModal, setBuyModal] = useState(false);
   return (
     <div className="container">
       <div className="hero">
         {openChestModal && <OpenChestModal closeModal={setOpenChestModal} />}
+        {buyModal && <BuyModal closeModal={setBuyModal} />}
         <img src="/hero-bg.png" className="hero-bg" alt="" />
         <img
           onClick={() => setOpenChestModal(true)}
@@ -15,7 +18,12 @@ const Hero = () => {
           alt=""
           className="key"
         />
-        <img src="/chest.png" alt="" className="chest" />
+        <img
+          onClick={() => setBuyModal(true)}
+          src="/chest.png"
+          alt=""
+          className="chest"
+        />
         <div className="btn-div">
           <img src="/gold-frame.png" alt="" className="frame" />
           <div className="btn">
