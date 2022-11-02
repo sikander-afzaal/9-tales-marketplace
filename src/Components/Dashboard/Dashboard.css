@@ -7,6 +7,11 @@
   max-width: var(--max-width);
   padding-inline: 20px;
 }
+@media screen and (max-width: 1600px) {
+  .dashboard {
+    grid-template-columns: 270px 1fr;
+  }
+}
 .sidebar {
   grid-area: sidebar;
   background: var(--red-gradient);
