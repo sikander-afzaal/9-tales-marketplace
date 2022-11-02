@@ -49,7 +49,7 @@ const OpenChestModal = ({ closeModal }) => {
           {loader ? (
             <img className="loader" src="/loader.gif" />
           ) : (
-            <h2>{chestOpened ? "Close" : "Open"}</h2>
+            <h2 className="katibeh">{chestOpened ? "Close" : "Open"}</h2>
           )}
         </div>
       </div>

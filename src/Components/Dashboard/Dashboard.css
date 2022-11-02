@@ -118,6 +118,10 @@
   border-radius: 10px;
   padding-inline: 5px;
 }
+.left-bar > select:focus,
+.per-page > select:focus {
+  outline: none;
+}
 .left-bar > select option {
   background-color: rgba(35, 6, 6, 0.53);
   color: white;

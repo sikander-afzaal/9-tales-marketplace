@@ -57,7 +57,7 @@
 }
 .open-chest h2 {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: linear-gradient(180deg, #ebc680 0%, #866429 100%);
@@ -65,8 +65,8 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: 24px;
   text-transform: uppercase;
   line-height: 1;
 }
