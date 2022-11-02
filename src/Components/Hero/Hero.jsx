@@ -18,6 +18,7 @@ const Hero = () => {
           alt=""
           className="key"
         />
+        <a href="#prizes" className="scroll-bottom"></a>
         <img
           onClick={() => setBuyModal(true)}
           src="/chest.png"
