@@ -14,7 +14,7 @@
 }
 .note {
   position: absolute;
-  top: 20px;
+  top: 100px;
   right: 20px;
   z-index: 81;
 }
@@ -34,7 +34,7 @@
   width: 600px;
   height: 546px;
   left: 50%;
-  top: 38%;
+  top: 48%;
   transform: translate(-50%, -50%);
 }
 .modal-bg {
