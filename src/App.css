@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   gap: 40px;
-  min-height: 100vh;
+  height: calc(100vh - 80px);
   display: grid !important;
   grid-template-columns: 1fr;
   grid-template-rows: 140px 1fr 80px;
