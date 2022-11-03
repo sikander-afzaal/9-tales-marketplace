@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-scroll";
 import BuyModal from "../BuyModal/BuyModal";
 import OpenChestModal from "../OpenChestModal/OpenChestModal";
 import "./Hero.css";
@@ -18,14 +19,7 @@ const Hero = () => {
           alt=""
           className="key"
         />
-        <p
-          onClick={() => {
-            let pageHeight = window.innerHeight;
-            console.log(pageHeight);
-            window.scrollBy(0, pageHeight - 80);
-          }}
-          className="scroll-bottom"
-        ></p>
+        <Link to="prizes" offset={-80} className="scroll-bottom"></Link>
         <img
           onClick={() => setBuyModal(true)}
           src="/chest.png"

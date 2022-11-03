@@ -1,6 +1,6 @@
 .footer-cont {
   background: var(--red-gradient);
-  height: 100px;
+  min-height: 80px;
   padding-inline: 20px;
 }
 footer {
