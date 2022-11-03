@@ -23,7 +23,7 @@ const Dashboard = () => {
   const [checkbox2, setCheckbox2] = useState(false);
   const [checkbox3, setCheckbox3] = useState(false);
   return (
-    <div className="container">
+    <div className="container height">
       <div className="dashboard">
         <div className="sidebar">
           <h2>Live Feed</h2>

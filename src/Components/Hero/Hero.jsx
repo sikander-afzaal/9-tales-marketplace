@@ -21,6 +21,7 @@ const Hero = () => {
         <p
           onClick={() => {
             let pageHeight = window.innerHeight;
+            console.log(pageHeight);
             window.scrollBy(0, pageHeight - 80);
           }}
           className="scroll-bottom"
