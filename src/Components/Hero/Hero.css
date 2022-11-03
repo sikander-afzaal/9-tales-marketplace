@@ -6,7 +6,7 @@
   max-width: var(--max-width);
   position: relative;
   min-height: 730px;
-  height: 100vh;
+  height: calc(100vh - 80px);
   margin-top: 0px;
 }
 .hero-bg {
