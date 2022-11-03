@@ -3,4 +3,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   gap: 40px;
+  height: 988px;
+  justify-content: space-between !important;
 }

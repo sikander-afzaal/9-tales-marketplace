@@ -2,7 +2,7 @@ import "./Prizes.css";
 
 const Prizes = () => {
   return (
-    <div id="prizes" className="prizes container">
+    <div className="prizes container">
       <div className="prize-div">
         <div className="left-patt">
           <img src="/left.png" alt="" />

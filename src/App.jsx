@@ -10,7 +10,7 @@ const App = () => {
     <div>
       <Header />
       <Hero />
-      <div className="bg-2 container">
+      <div id="prizes" className="bg-2 container">
         <Prizes />
         <Dashboard />
         <Footer />

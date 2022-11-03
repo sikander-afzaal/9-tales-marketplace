@@ -18,7 +18,13 @@ const Hero = () => {
           alt=""
           className="key"
         />
-        <a href="#prizes" className="scroll-bottom"></a>
+        <p
+          onClick={() => {
+            let pageHeight = window.innerHeight;
+            window.scrollBy(0, pageHeight - 80);
+          }}
+          className="scroll-bottom"
+        ></p>
         <img
           onClick={() => setBuyModal(true)}
           src="/chest.png"

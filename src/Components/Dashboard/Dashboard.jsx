@@ -14,6 +14,9 @@ const LiveBox = ({ address, time, item }) => {
     </div>
   );
 };
+const NFTCard = ({ img }) => {
+  return <div className="nft-card">{img && <img src={img} alt="" />}</div>;
+};
 
 const Dashboard = () => {
   const [checkbox1, setCheckbox1] = useState(false);
@@ -111,22 +114,16 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="nft-cards">
-            <div className="nft-card">
-              <img src="/gift.png" alt="" />
-            </div>
-            <div className="nft-card">
-              <img src="/gift.png" alt="" />
-            </div>
-            <div className="nft-card"></div>
-            <div className="nft-card"></div>
-            <div className="nft-card">
-              <img src="/gift.png" alt="" />
-            </div>
-            <div className="nft-card"></div>
-            <div className="nft-card"></div>
-            <div className="nft-card"></div>
-            <div className="nft-card"></div>
-            <div className="nft-card"></div>
+            <NFTCard />
+            <NFTCard img={"/gift.png"} />
+            <NFTCard />
+            <NFTCard img={"/gift.png"} />
+            <NFTCard img={"/gift.png"} />
+            <NFTCard />
+            <NFTCard />
+            <NFTCard />
+            <NFTCard />
+            <NFTCard />
           </div>
         </div>
       </div>
