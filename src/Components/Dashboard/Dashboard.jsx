@@ -55,6 +55,60 @@ const Dashboard = () => {
     {
       img: false,
     },
+    {
+      img: false,
+    },
+    {
+      img: false,
+    },
+    {
+      img: false,
+    },
+    {
+      img: false,
+    },
+  ];
+  const LIVE__FEED = [
+    {
+      address: "0f129...b6 won",
+      time: "Few seconds ago",
+      item: "Discord Nitro",
+    },
+    {
+      address: "0f129...b6 won",
+      time: "Few seconds ago",
+      item: "Discord Nitro",
+    },
+    {
+      address: "0f129...b6 won",
+      time: "Few seconds ago",
+      item: "Discord Nitro",
+    },
+    {
+      address: "0f129...b6 won",
+      time: "Few seconds ago",
+      item: "Discord Nitro",
+    },
+    {
+      address: "0f129...b6 won",
+      time: "Few seconds ago",
+      item: "Discord Nitro",
+    },
+    {
+      address: "0f129...b6 won",
+      time: "Few seconds ago",
+      item: "Discord Nitro",
+    },
+    {
+      address: "0f129...b6 won",
+      time: "Few seconds ago",
+      item: "Discord Nitro",
+    },
+    {
+      address: "0f129...b6 won",
+      time: "Few seconds ago",
+      item: "Discord Nitro",
+    },
   ];
   const [checkbox1, setCheckbox1] = useState(false);
   const [checkbox2, setCheckbox2] = useState(false);
@@ -64,36 +118,9 @@ const Dashboard = () => {
       <div className="dashboard">
         <div className="sidebar">
           <h2>Live Feed</h2>
-          <LiveBox
-            address={"0f129...b6 won"}
-            time={"Few seconds ago"}
-            item={"Discord Nitro"}
-          />
-          <LiveBox
-            address={"0f129...b6 won"}
-            time={"Few seconds ago"}
-            item={"Discord Nitro"}
-          />
-          <LiveBox
-            address={"0f129...b6 won"}
-            time={"Few seconds ago"}
-            item={"Discord Nitro"}
-          />
-          <LiveBox
-            address={"0f129...b6 won"}
-            time={"Few seconds ago"}
-            item={"Discord Nitro"}
-          />
-          <LiveBox
-            address={"0f129...b6 won"}
-            time={"Few seconds ago"}
-            item={"Discord Nitro"}
-          />
-          <LiveBox
-            address={"0f129...b6 won"}
-            time={"Few seconds ago"}
-            item={"Discord Nitro"}
-          />
+          {LIVE__FEED.map((elem, idx) => {
+            return <LiveBox {...elem} key={"live" + idx} />;
+          })}
         </div>
         <div className="main-dash">
           <div className="top-bar">

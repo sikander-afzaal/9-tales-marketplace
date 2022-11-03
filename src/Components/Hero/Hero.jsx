@@ -19,7 +19,7 @@ const Hero = () => {
           alt=""
           className="key"
         />
-        <Link to="prizes" offset={0} className="scroll-bottom"></Link>
+        <Link to="prizes" offset={-80} className="scroll-bottom"></Link>
         <img
           onClick={() => setBuyModal(true)}
           src="/chest.png"
