@@ -19,6 +19,38 @@ const NFTCard = ({ img }) => {
 };
 
 const Dashboard = () => {
+  const NFT__DATA = [
+    {
+      img: "/gift.png",
+    },
+    {
+      img: "/gift.png",
+    },
+    {
+      img: "/gift.png",
+    },
+    {
+      img: "/gift.png",
+    },
+    {
+      img: "/gift.png",
+    },
+    {
+      img: "/gift.png",
+    },
+    {
+      img: false,
+    },
+    {
+      img: false,
+    },
+    {
+      img: false,
+    },
+    {
+      img: false,
+    },
+  ];
   const [checkbox1, setCheckbox1] = useState(false);
   const [checkbox2, setCheckbox2] = useState(false);
   const [checkbox3, setCheckbox3] = useState(false);
@@ -75,7 +107,12 @@ const Dashboard = () => {
                   onClick={() => setCheckbox1((prev) => !prev)}
                   className="check check1"
                 >
-                  <input checked={checkbox1} type="checkbox" id="newest" />
+                  <input
+                    readOnly
+                    checked={checkbox1}
+                    type="checkbox"
+                    id="newest"
+                  />
                   <img src="/tick.png" className="img1" alt="" />
                 </div>
                 <label htmlFor="newest">Newest First</label>
@@ -86,7 +123,12 @@ const Dashboard = () => {
                   className="check check2"
                 >
                   {" "}
-                  <input checked={checkbox2} type="checkbox" id="available" />
+                  <input
+                    readOnly
+                    checked={checkbox2}
+                    type="checkbox"
+                    id="available"
+                  />
                   <img className="img2" src="/tick.png" alt="" />
                 </div>
                 <label htmlFor="available">Available</label>
@@ -97,7 +139,12 @@ const Dashboard = () => {
                   className="check check3"
                 >
                   {" "}
-                  <input checked={checkbox3} type="checkbox" id="expired" />
+                  <input
+                    readOnly
+                    checked={checkbox3}
+                    type="checkbox"
+                    id="expired"
+                  />
                   <img className="img3" src="/tick.png" alt="" />
                 </div>
                 <label htmlFor="expired">Expired</label>
@@ -114,16 +161,9 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="nft-cards">
-            <NFTCard />
-            <NFTCard img={"/gift.png"} />
-            <NFTCard />
-            <NFTCard img={"/gift.png"} />
-            <NFTCard img={"/gift.png"} />
-            <NFTCard />
-            <NFTCard />
-            <NFTCard />
-            <NFTCard />
-            <NFTCard />
+            {NFT__DATA.map((elem, idx) => {
+              return <NFTCard {...elem} key={"box" + idx} />;
+            })}
           </div>
         </div>
       </div>
