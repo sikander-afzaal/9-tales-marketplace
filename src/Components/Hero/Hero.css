@@ -53,12 +53,36 @@
     left: 10%;
   }
 }
-.chest {
+.chest,
+.chest-hover {
   position: absolute;
-  top: 47%;
+  top: 56%;
   cursor: pointer;
   left: 50%;
+  width: 400px;
+  object-fit: contain;
   transform: translate(-50%, -50%);
+  z-index: 40;
+}
+@media screen and (min-width: 1800px) {
+  .chest,
+  .chest-hover {
+    width: 500px;
+  }
+}
+@media screen and (min-width: 2200px) {
+  .chest,
+  .chest-hover {
+    width: 600px;
+  }
+}
+.chest-hover {
+  z-index: 42;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+.chest-hover:hover {
+  opacity: 1;
 }
 .scroll-bottom {
   background-color: black;

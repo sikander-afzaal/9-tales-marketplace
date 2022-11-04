@@ -1,6 +1,7 @@
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import "./Dashboard.css";
 
 const LiveBox = ({ address, time, item }) => {
@@ -113,6 +114,77 @@ const Dashboard = () => {
   const [checkbox1, setCheckbox1] = useState(false);
   const [checkbox2, setCheckbox2] = useState(false);
   const [checkbox3, setCheckbox3] = useState(false);
+  const [userData, setUserData] = useState({
+    "num-of-opened-boxes": "",
+    "last-opened-box": "",
+    "num-of-won-items": "",
+    "recent-won-items": [
+      {
+        index: "",
+        title: "",
+        category: "",
+        "image-url": "",
+      },
+    ],
+  });
+  const [poolItemInfo, setPoolItemInfo] = useState({
+    Reference: "",
+    pool: "",
+    title: "",
+    onChainType: "",
+    category: "",
+    "opensea-link": "",
+    "reward-amount": "",
+    "expiration-time": "",
+    expired: "",
+    supply: "",
+    "recent-winners": "",
+  });
+  const [poolItems, setPoolItems] = useState({
+    available: [
+      {
+        index: "",
+        title: "",
+        category: "",
+        "image-url": "",
+      },
+    ],
+    expired: [],
+  });
+  const [sig, setSig] = useState(false);
+  useEffect(() => {
+    //getting user data
+    axios
+      .get("/getUserMBdata")
+      .then((res) => {
+        setUserData(res.data);
+      })
+      .catch((err) => console.log(err));
+
+    //getting pool items
+    axios
+      .get("/getPoolItems")
+      .then((res) => {
+        setPoolItems(res.data);
+      })
+      .catch((err) => console.log(err));
+
+    //getting pool items info
+    axios
+      .get("/getItemInfo")
+      .then((res) => {
+        setPoolItems(res.data);
+      })
+      .catch((err) => console.log(err));
+
+    //getting box signature
+    axios
+      .get("/getBoxSig")
+      .then((res) => {
+        setSig(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <div className="container height">
       <div className="dashboard">

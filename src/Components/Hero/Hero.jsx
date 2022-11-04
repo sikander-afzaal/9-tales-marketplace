@@ -20,11 +20,12 @@ const Hero = () => {
           className="key"
         />
         <Link to="prizes" offset={-80} className="scroll-bottom"></Link>
+        <img src="/chest.png" alt="" className="chest" />
         <img
           onClick={() => setBuyModal(true)}
-          src="/chest.png"
+          src="/chest-hover.png"
           alt=""
-          className="chest"
+          className="chest-hover"
         />
         <div className="btn-div">
           <img src="/gold-frame.png" alt="" className="frame" />
