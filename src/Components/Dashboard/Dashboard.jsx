@@ -15,9 +15,11 @@ const LiveBox = ({ address, time, item }) => {
     </div>
   );
 };
-const NFTBox = ({ img }) => {
+const NFTBox = ({ imageUrl }) => {
   return (
-    <div className="nft-card">{img && <img src="/gift.png" alt="" />}</div>
+    <div className="nft-card">
+      <img src={imageUrl} alt="" />
+    </div>
   );
 };
 
@@ -140,50 +142,50 @@ const Dashboard = () => {
     supply: "",
     "recent-winners": "",
   });
-  const [poolItems, setPoolItems] = useState({
-    available: [
-      {
-        index: "",
-        title: "",
-        category: "",
-        "image-url": "",
-      },
-    ],
-    expired: [],
-  });
+  const [poolItems, setPoolItems] = useState([]);
   const [sig, setSig] = useState(false);
   useEffect(() => {
     //getting user data
-    axios
-      .get("/getUserMBdata")
-      .then((res) => {
-        setUserData(res.data);
-      })
-      .catch((err) => console.log(err));
+    // axios
+    //   .get("/getUserMBdata")
+    //   .then((res) => {
+    //     setUserData(res.data);
+    //   })
+    //   .catch((err) => console.log(err));
 
     //getting pool items
     axios
-      .get("/getPoolItems")
+      .post("https://mb-api-test.colonelbihi.com/mysteryBox/getPoolItems", {
+        pool: 0,
+        includeExpired: false,
+      })
       .then((res) => {
-        setPoolItems(res.data);
+        const items = res.data.items.map((elem) => {
+          const id = elem.ref;
+          delete elem.ref;
+          return { ...elem, id: id };
+        });
+        setPoolItems(items);
       })
       .catch((err) => console.log(err));
 
-    //getting pool items info
+    // getting pool items info
     axios
-      .get("/getItemInfo")
+      .post("https://mb-api-test.colonelbihi.com/mysteryBox/getItemInfo", {
+        ref: 100,
+      })
       .then((res) => {
-        setPoolItems(res.data);
+        setPoolItemInfo(res.data.item);
       })
       .catch((err) => console.log(err));
 
     //getting box signature
-    axios
-      .get("/getBoxSig")
-      .then((res) => {
-        setSig(res.data);
-      })
-      .catch((err) => console.log(err));
+    // axios
+    //   .get("/getBoxSig")
+    //   .then((res) => {
+    //     setSig(res.data);
+    //   })
+    //   .catch((err) => console.log(err));
   }, []);
   return (
     <div className="container height">
@@ -265,9 +267,10 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="nft-cards">
-            {NFT__DATA.map((elem, idx) => {
-              return <NFTBox {...elem} key={"box" + idx} />;
-            })}
+            {poolItems &&
+              poolItems?.map((elem, idx) => {
+                return <NFTBox {...elem} key={"box" + idx} />;
+              })}
           </div>
         </div>
       </div>

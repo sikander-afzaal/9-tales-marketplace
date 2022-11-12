@@ -13,9 +13,12 @@ const App = () => {
   useEffect(() => {
     //getting pool info
     axios
-      .get("/getPoolInfo")
+      .post("https://mb-api-test.colonelbihi.com/mysteryBox/getPoolInfo", {
+        pool: 0,
+      })
       .then((res) => {
-        setPoolInfo(res.data);
+        // console.log(res.data);
+        setPoolInfo(res.data.pool);
       })
       .catch((err) => console.log(err));
   }, []);
